@@ -2,3 +2,8 @@ datasets
 numpy
 tqdm
 lsdb
+torch
+torchvision
+astropy
+matplotlib
+pillow
