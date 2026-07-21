@@ -1,0 +1,81 @@
+**Prompt**: I am attaching 7 separate JWST NIRCam flux images (survey: CEERS, filter
+f090w), each centered on a different catalogued astronomical source. 
+
+Treat each image as fully independent — do not compare or reference other images in this set when describing one. This is real telescope flux data, not a stock photo; For each image, give me: (1) a detailed caption of what you observe —morphology, structure, any secondary sources visible, (2) how confident you are that this represents a real source vs. noise, and (3) any domain-relevant interpretation specific to what's visible in *this* image (not general JWST facts).
+
+-------
+
+## 1. Source `1757963689505784941 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+An elongated, low-surface-brightness linear feature runs diagonally from the upper-left toward the lower-right across the central area. The emission is faint and diffuse, lacking a sharp central core or point source. A minor, faint enhancement is also visible near the bottom-left of the field. The image background exhibits significant pixel-to-pixel noise RMS variations with sporadic dark and bright single-pixel fluctuations.
+* **(2) Source Confidence:**
+**Moderate-to-Low (~40–50%)**. The extended central feature is faint relative to the background variance. Without multi-band confirmation (e.g., longer-wavelength NIRCam filters), it is difficult to completely rule out flat-field residuals, background sky fluctuations, or correlated noise artifacts.
+* **(3) Domain-Relevant Interpretation:**
+If genuine, the extended, low-surface-brightness morphology in F090W ($\sim 0.9\ \mu\text{m}$, tracing rest-frame UV to blue optical light at intermediate-to-high redshifts) is consistent with an edge-on, disk-dominated galaxy or an extended tidal feature/stellar stream undergoing low levels of diffuse star formation.
+
+---
+
+## 2. Source `1757963689505784943 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+A bright, highly compact point-like source dominates near the center of the frame. The flux is strongly concentrated into a central core spanning only a few pixels with a rapid, symmetric radial fall-off. A faint, diffuse secondary clump is detected immediately south/below the primary source.
+* **(2) Source Confidence:**
+**High (>90%)**. The central source displays a strong signal-to-noise ratio (S/N) with a distinct flux peak that rises well above the local background noise level.
+* **(3) Domain-Relevant Interpretation:**
+The unresolved spatial profile in F090W indicates either a highly compact starbursting galaxy (e.g., a high-redshift "blue nugget"), a faint galactic foreground star, or an active galactic nucleus (AGN) where light is dominated by an unresolved central engine. The faint southern feature may represent a low-mass companion or a faint extended stellar halo.
+
+---
+
+## 3. Source `1757963689505784971 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+The center displays an extended, diffuse galaxy envelope containing internal clumpy sub-structure: two prominent, bright emission knots are visible in the central region (one primary knot near the lower-center and a second knot offset to the upper-right). An independent, moderately compact secondary source is visible near the upper-left margin.
+* **(2) Source Confidence:**
+**Very High (>95%)**. The main central galaxy stands out clearly against the background with a well-defined extended envelope spanning many resolution elements.
+* **(3) Domain-Relevant Interpretation:**
+The distinct internal clumps embedded in a shared diffuse envelope are characteristic of a clumpy star-forming galaxy at high redshift, where giant starbursting complexes dominate the rest-frame UV light. Alternatively, the dual core structure could signify a late-stage galaxy-galaxy merger event.
+
+---
+
+## 4. Source `1757963689505785077 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+The lower-right quadrant contains a large, bright, multi-component galaxy with an extended halo and distinct internal flux peaks. Near the upper-left, a separate bright extended companion source is visible. A faint, diffuse third structure sits near the center of the image.
+* **(2) Source Confidence:**
+**Very High (>95%)** for both the primary lower-right galaxy and the upper-left companion; **Moderate (~70%)** for the faint central diffuse feature.
+* **(3) Domain-Relevant Interpretation:**
+This field captures a complex local environment, likely representing an interacting galaxy pair or a compact high-redshift galaxy group. In F090W, the extended light distribution and nearby companions strongly suggest dynamical interaction or tidal processing in a dense environment.
+
+---
+
+## 5. Source `1757963689505785165 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+The central target displays a clear double-peak (binary) structure comprising two closely separated emission components embedded within a faint common envelope. To the lower-right, an additional diffuse, moderately bright companion source is visible.
+* **(2) Source Confidence:**
+**High (>85%)**. Both components of the central double-peak rise clearly above background fluctuations and show spatial coherence across neighboring pixels.
+* **(3) Domain-Relevant Interpretation:**
+The resolved double-peak morphology at $\sim 0.9\ \mu\text{m}$ indicates either a close major galaxy merger in progress or a clumpy, irregular star-forming galaxy with two dominant starburst regions.
+
+---
+
+## 6. Source `1757963689505785398 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+The image center contains a diffuse, extended structure with an elongated, somewhat hourglass or bipolar light distribution. A faint central core is flanked by extended lobes that gradually blend into the surrounding background noise.
+* **(2) Source Confidence:**
+**High (~80%)**. The continuous extended light profile covers multiple pixels around the catalog center, confirming a real astronomical detection rather than a noise artifact.
+* **(3) Domain-Relevant Interpretation:**
+The extended and symmetric morphology in F090W is consistent with an edge-on disk galaxy or a dust-obscured system where an equatorial dust lane divides the rest-frame UV/optical emission into two diffuse, scattered-light lobes.
+
+---
+
+## 7. Source `1757963689505785654 — f090w`
+
+* **(1) Observed Morphology & Structure:**
+A bright, compact central source is surrounded by asymmetrical, fan-like or triangular extensions fading toward the upper-right and lower-right. The surrounding sky background shows uniform pixel noise with no other major sources nearby.
+* **(2) Source Confidence:**
+**High (>90%)**. The high peak central surface brightness and coherent, extended fan-like structure confirm a genuine target detection well above noise.
+* **(3) Domain-Relevant Interpretation:**
+The strongly asymmetric light distribution surrounding a bright core is a classic signature of tidal tails resulting from recent or ongoing gravitational interaction, or asymmetric galactic outflows driving star-forming gas/stars out from the host core.
