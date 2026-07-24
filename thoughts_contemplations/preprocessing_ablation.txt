@@ -1,0 +1,3 @@
+so now, my question is, now there are two movable cogs in this scheme of things. 1 being the preprocessing step/image representation which makes it clearer (or so I hope) to the astropt model, what tf that image actually is and contains/shows.
+
+2 being the quality of the linear probe - which is trainable. So my question is, lets say I have a mediocre representation of the images (poor preprocessing, not well thought of), and astropt gives me an embedding output. I still minimize my loss and somehow come to a linear probe that matches the representation well with the ground truth metric from provabgs.
