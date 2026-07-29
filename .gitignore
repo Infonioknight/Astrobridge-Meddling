@@ -4,3 +4,13 @@ env
 models
 __pycache__
 dinov2
+cutouts
+cutouts_split
+linear_probe_results.zip
+probe_attention_best.pt
+probe_baseline_best.pt
+training_log_attention.csv
+training_log_baseline.csv
+train_embeddings_attention.npy
+train_embeddings_baseline.npy
+sample_2k_matches_metadata.parquet

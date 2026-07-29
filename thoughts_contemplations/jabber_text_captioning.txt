@@ -1,0 +1,13 @@
+This is actually a pretty coherent direction, and it maps onto something the field already has vocabulary for — you're essentially describing a **decoder conditioned on a frozen vision embedding**, which is exactly the LLaVA/BLIP-style pattern, just stripped down to something small enough to train yourself instead of finetuning a full 7B LLM.
+
+A few things worth thinking through:
+
+**On "unsupervised captioning" — this is the crux, and it's worth being precise about it.** True unsupervised captioning (no paired text at all) is a genuinely hard open problem even in general vision-language research — the model has nothing to ground language generation against. What you *do* have with `galaxies-with-hats` is rich **structured metadata** (redshift, morphology votes, magnitudes, etc.) rather than free-text captions. That's a different and more tractable setup: you'd be doing **conditional text generation from structured attributes**, not unsupervised captioning. Practically, this means:
+- Templated/programmatic caption generation from the metadata fields (e.g. "a smooth elliptical galaxy at z≈0.3 with high stellar mass") to create pseudo-captions, then train your small decoder to map embedding → that text. This is weakly-supervised, not unsupervised, but it's honest about what signal you're actually using — and it's very achievable with what you have.
+- This also sidesteps needing to verify captions against domain knowledge you don't have yet (the exact problem you flagged with the Gemini captions earlier) — since the "ground truth" text here is derived directly from catalog values, not a model's guess.
+
+**On the architecture (embedding → first layer):** projecting a 768-dim vector into a small transformer decoder's embedding space (as a prefix token, à la prefix-tuning / ClipCap-style captioning) is a well-trodden and lightweight pattern — you don't need to retrain a full LLM, just a small decoder-only model with the embedding injected as a conditioning token. Given your GPU/compute constraints, this is much more tractable than trying to finetune a real VLM.
+
+**Where this could genuinely differentiate your work:** most captioning setups condition on CLIP-style embeddings trained on natural images. Conditioning on AstroPT or DINOv2 embeddings *specifically fine-tuned/tested on astronomical data* — then generating text grounded in real catalog attributes — is a more novel angle than off-the-shelf VLM captioning, and ties directly into the representation-alignment framing you're already pursuing for AstroBridge.
+
+Given your timeline right now, I'd flag this as a "park it, revisit in October" idea rather than something to prototype this week — but it's a solid one worth keeping.
