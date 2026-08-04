@@ -14,3 +14,12 @@ training_log_baseline.csv
 train_embeddings_attention.npy
 train_embeddings_baseline.npy
 sample_2k_matches_metadata.parquet
+mmu_data_loading.ipynb
+train_embeddings_aion.npy
+test_embeddings_aion.npy
+probe_best.pt
+aion_probe_results
+paper_crossmatching/filtered_data_by_object_name-20260801T164907Z-1-001.zip
+paper_crossmatching/all_crossmatch_rows_combined.csv
+paper_crossmatching/filtered_data-20260801T164837Z-1-001.zip
+paper_crossmatching/literature_x_legacysurvey_matches.csv

@@ -1,0 +1,41 @@
+okie, I hope you have context of a few things. 
+
+1. Kevins notebook for pca trees - outlier hunting
+2. The code I'd used to get my crossmatch for papers x legacy survey (it was one cell)
+
+
+I have an idea now. Create a few things. First and foremost, I'm sure each match must have a corresponding galaxy and spectrum. We will keep that in mind, and each is identified by a unique healpix 29 id.
+First step, for each item inside my literature_x_legacysurvey_matches.csv file, I'd like to run kevin's script -> for which I'm sure I can handle this in two ways. First identically use the spectra outlier finding method where
+
+1. I retrieve spectra for the row
+2. PCA to reduce dimensionality to a reasonable and useful dim (256)
+3. Do the processing that kevin had done beforehand, which is probably run an isolation tree on all 315 samples, and pick a total of 25 which are considered 'outliers'.
+
+
+Next, I was thinknig of getting my images, and doing smth i do best, which is image work
+
+1. Encode the image using the aion encoder - which I've verified to work well -> 768 dim representation which is a much more concise ("PCA'D) version (not really i just mean dim reduced representation) of the grz banded image.
+2. Do the same kind of median preprocessing that kevin had done for spectra (or suggest a more meaningful version for the images)
+3. Sample 25 outliers from here again which I expect will require an isolation forest tree run
+
+
+Now we have 50! Rest 50 images are randomly sampled rows!
+
+We have a dataset of 100. What are your thoughts? Is this well thought out?
+
+
+---
+
+Hello! I had an idea I’d love to run by yall here. 
+
+On the creation of the 100 item (img x spectra x paper) dataset, we a starting point where we have 315 spectra crossmatched with images from the legacy_survey which have papers (based off filtering conditions mentioned above, though I can’t recall which specifically, I’m sure Ibrahim can clarify on that.
+
+I was thinking of using the same technique that Kevin used for spectra to find outliers (binning + PCA + isolation forest -> correct me if I’m mistaken here) and get a small sample (say 15-25) spectra.
+
+Similarly for images (here is where I’d like another bit of critique) where I thought to just encode them with AION-1 (I tried using it as my choice of vision encoder for the linear probe and it performed better than AstroPT, same 768 dim encoding) and use KNN to pull out a small sample of outliers here too (another 15-25).
+
+We might have overlaps and that will require a dedupe step (incase both spectra and images are outliers) and save the final number of outliers we get (where minimum number of outliers will be the max we choose as our number for either spectra or image samples)
+
+Finally on the remaining, randomly sample 100-(outliers) and we have our dataset. 
+
+Thoughts?

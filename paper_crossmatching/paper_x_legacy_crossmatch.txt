@@ -1,0 +1,10 @@
+315 / 1772 targets matched (17.8%)
+count       315.0
+mean     0.110772
+std      0.147925
+min      0.000939
+25%      0.021568
+50%      0.068963
+75%      0.117522
+max       0.94672
+Name: _dist_arcsec, dtype: double[pyarrow]
